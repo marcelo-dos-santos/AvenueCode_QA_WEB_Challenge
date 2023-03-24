@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230323 01:47:38.717" rpa="false" schemaversion="3">
+<suite id="s1" name="Avenuecode Automation" source="C:\Users\Administrator\Documents\Programação\AvenueCode\Test\avenuecode_automation.robot">
+<test id="s1-t1" name="Case 01: Create Task" line="8">
+<kw name="Abrir o navegador" library="avenuecode_automation" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230323 01:47:39.115" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230323 01:47:39.115" endtime="20230323 01:47:40.933"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230323 01:47:40.933" endtime="20230323 01:47:41.062"/>
+</kw>
+<status status="PASS" starttime="20230323 01:47:39.114" endtime="20230323 01:47:41.063"/>
+</kw>
+<kw name="Given that the user is logged in to the ToDo App" library="avenuecode_automation">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230323 01:47:41.064" level="INFO">Opening url 'https://qa-test.avenuecode.io/'</msg>
+<msg timestamp="20230323 01:47:48.668" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF77490&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot</msg>
+<msg timestamp="20230323 01:47:52.715" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF80F10&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot</msg>
+<msg timestamp="20230323 01:47:56.787" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF816D0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot</msg>
+<msg timestamp="20230323 01:48:00.893" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=50159): Max retries exceeded with url: /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF82150&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<msg timestamp="20230323 01:48:00.894" level="FAIL">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None))</msg>
+<status status="FAIL" starttime="20230323 01:47:41.064" endtime="20230323 01:48:00.986"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h1[contains(.,'QA Assessment')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:00.986" endtime="20230323 01:48:00.986"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[@class='btn btn-lg btn-primary'][contains(.,'Sign In')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:00.986" endtime="20230323 01:48:00.987"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h4[contains(.,'Sign in')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:00.987" endtime="20230323 01:48:00.987"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=user_email</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:00.987" endtime="20230323 01:48:00.987"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_email</arg>
+<arg>text=${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:00.987" endtime="20230323 01:48:00.987"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=user_password</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:00.987" endtime="20230323 01:48:00.987"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_password</arg>
+<arg>text=${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:00.987" endtime="20230323 01:48:00.987"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name=commit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:00.987" endtime="20230323 01:48:00.987"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//div[@class='alert alert-info'][contains(.,'Signed in successfully.')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:00.987" endtime="20230323 01:48:00.987"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=my_task</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:00.987" endtime="20230323 01:48:00.988"/>
+</kw>
+<status status="FAIL" starttime="20230323 01:47:41.064" endtime="20230323 01:48:00.988"/>
+</kw>
+<kw name="When the user clicks on the &quot;My Tasks&quot; link on the NavBar" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:00.988" endtime="20230323 01:48:00.988"/>
+</kw>
+<kw name="Then the user is redirected to a page with all the created tasks so far" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:00.989" endtime="20230323 01:48:00.989"/>
+</kw>
+<kw name="And the user sees a message on the top part saying that list belongs to the logged user" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:00.989" endtime="20230323 01:48:00.989"/>
+</kw>
+<kw name="And the user creates a new task with at least three characters" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:00.990" endtime="20230323 01:48:00.990"/>
+</kw>
+<kw name="And the user adds the task to the list" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:00.990" endtime="20230323 01:48:00.990"/>
+</kw>
+<kw name="And the new task is appended to the list of created tasks" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:00.990" endtime="20230323 01:48:00.990"/>
+</kw>
+<kw name="Fechar o navegador" library="avenuecode_automation" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230323 01:48:05.049" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23E3AAFD0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot</msg>
+<msg timestamp="20230323 01:48:09.108" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23D2FC6D0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot</msg>
+<msg timestamp="20230323 01:48:13.164" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF820D0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot</msg>
+<msg timestamp="20230323 01:48:21.293" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23E3A8F90&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot</msg>
+<msg timestamp="20230323 01:48:25.359" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF823D0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot</msg>
+<msg timestamp="20230323 01:48:29.397" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF80F90&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot</msg>
+<msg timestamp="20230323 01:48:33.456" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: HTTPConnectionPool(host='localhost', port=50159): Max retries exceeded with url: /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF807D0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<msg timestamp="20230323 01:48:33.457" level="FAIL">MaxRetryError: HTTPConnectionPool(host='localhost', port=50159): Max retries exceeded with url: /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF85FD0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</msg>
+<status status="FAIL" starttime="20230323 01:48:00.991" endtime="20230323 01:48:33.484"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<msg timestamp="20230323 01:48:37.570" level="WARN">Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23E3B9AD0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a</msg>
+<msg timestamp="20230323 01:48:41.641" level="WARN">Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23E3BA390&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a</msg>
+<msg timestamp="20230323 01:48:45.725" level="WARN">Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23E3BAC90&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente')': /session/d89174e88fe6e53f9e905d55cf29d28a</msg>
+<status status="PASS" starttime="20230323 01:48:33.484" endtime="20230323 01:48:53.866"/>
+</kw>
+<status status="FAIL" starttime="20230323 01:48:00.991" endtime="20230323 01:48:53.866">MaxRetryError: HTTPConnectionPool(host='localhost', port=50159): Max retries exceeded with url: /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF85FD0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
+</kw>
+<status status="FAIL" starttime="20230323 01:47:39.111" endtime="20230323 01:48:53.867">ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'Foi forçado o cancelamento de uma conexão existente pelo host remoto', None, 10054, None))
+
+Also teardown failed:
+MaxRetryError: HTTPConnectionPool(host='localhost', port=50159): Max retries exceeded with url: /session/d89174e88fe6e53f9e905d55cf29d28a/screenshot (Caused by NewConnectionError('&lt;urllib3.connection.HTTPConnection object at 0x000001E23DF85FD0&gt;: Failed to establish a new connection: [WinError 10061] Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente'))</status>
+</test>
+<test id="s1-t2" name="Case 02: Create Subtasks" line="17">
+<kw name="Abrir o navegador" library="avenuecode_automation" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230323 01:48:53.870" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20230323 01:48:53.870" endtime="20230323 01:48:55.125"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230323 01:48:55.125" endtime="20230323 01:48:55.256"/>
+</kw>
+<status status="PASS" starttime="20230323 01:48:53.869" endtime="20230323 01:48:55.256"/>
+</kw>
+<kw name="Given that the user is logged in to the ToDo App" library="avenuecode_automation">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>url=${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230323 01:48:55.257" level="INFO">Opening url 'https://qa-test.avenuecode.io/'</msg>
+<status status="PASS" starttime="20230323 01:48:55.257" endtime="20230323 01:48:58.574"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h1[contains(.,'QA Assessment')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20230323 01:48:58.608" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=111.0.5563.110)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0034DCE3]
+	(No symbol) [0x002E39D1]
+	(No symbol) [0x001F4DA8]
+	(No symbol) [0x001DD0D3]
+	(No symbol) [0x0023EA8B]
+	(No symbol) [0x0024D093]
+	(No symbol) [0x0023ACC6]
+	(No symbol) [0x00216F68]
+	(No symbol) [0x002180CD]
+	GetHandleVerifier [0x005C3832+2506274]
+	GetHandleVerifier [0x005F9794+2727300]
+	GetHandleVerifier [0x005FE36C+2746716]
+	GetHandleVerifier [0x003F6690+617600]
+	(No symbol) [0x002EC712]
+	(No symbol) [0x002F1FF8]
+	(No symbol) [0x002F20DB]
+	(No symbol) [0x002FC63B]
+	BaseThreadInitThunk [0x76A200F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77B17BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77B17B8E+238]
+</msg>
+<msg timestamp="20230323 01:48:58.732" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=111.0.5563.110)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0034DCE3]
+	(No symbol) [0x002E39D1]
+	(No symbol) [0x001F4DA8]
+	(No symbol) [0x001DD0D3]
+	(No symbol) [0x0023EA8B]
+	(No symbol) [0x0024D093]
+	(No symbol) [0x0023ACC6]
+	(No symbol) [0x00216F68]
+	(No symbol) [0x002180CD]
+	GetHandleVerifier [0x005C3832+2506274]
+	GetHandleVerifier [0x005F9794+2727300]
+	GetHandleVerifier [0x005FE36C+2746716]
+	GetHandleVerifier [0x003F6690+617600]
+	(No symbol) [0x002EC712]
+	(No symbol) [0x002F1FF8]
+	(No symbol) [0x002F20DB]
+	(No symbol) [0x002FC63B]
+	BaseThreadInitThunk [0x76A200F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77B17BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77B17B8E+238]
+</msg>
+<status status="FAIL" starttime="20230323 01:48:58.574" endtime="20230323 01:48:58.759"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>locator=//a[@class='btn btn-lg btn-primary'][contains(.,'Sign In')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:58.759" endtime="20230323 01:48:58.759"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//h4[contains(.,'Sign in')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:58.760" endtime="20230323 01:48:58.760"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=user_email</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:58.760" endtime="20230323 01:48:58.760"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_email</arg>
+<arg>text=${login}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:58.760" endtime="20230323 01:48:58.760"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=user_password</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:58.760" endtime="20230323 01:48:58.760"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user_password</arg>
+<arg>text=${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:58.760" endtime="20230323 01:48:58.761"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>name=commit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:58.761" endtime="20230323 01:48:58.762"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>locator=//div[@class='alert alert-info'][contains(.,'Signed in successfully.')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:58.762" endtime="20230323 01:48:58.762"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>id=my_task</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20230323 01:48:58.762" endtime="20230323 01:48:58.762"/>
+</kw>
+<status status="FAIL" starttime="20230323 01:48:55.257" endtime="20230323 01:48:58.763"/>
+</kw>
+<kw name="When the user clicks on the &quot;My Tasks&quot; link on the NavBar" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:58.768" endtime="20230323 01:48:58.768"/>
+</kw>
+<kw name="Then the user is redirected to a page with all the created tasks so far" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:58.772" endtime="20230323 01:48:58.773"/>
+</kw>
+<kw name="And the user clicks on the &quot;Manage Subtasks&quot; button" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:58.815" endtime="20230323 01:48:58.815"/>
+</kw>
+<kw name="Then the user should see a popup dialog with the task ID and task description" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:58.818" endtime="20230323 01:48:58.819"/>
+</kw>
+<kw name="And the user should see a form to enter SubTask Description and Due Date" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:58.826" endtime="20230323 01:48:58.827"/>
+</kw>
+<kw name="When the user enters a valid SubTask Description and Due Date" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:58.830" endtime="20230323 01:48:58.831"/>
+</kw>
+<kw name="And the user clicks the &quot;Add SubTask&quot; button" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:58.832" endtime="20230323 01:48:58.832"/>
+</kw>
+<kw name="Then the user should see the SubTask appended to the bottom of the modal dialog" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:58.833" endtime="20230323 01:48:58.833"/>
+</kw>
+<kw name="And the user should see the number of SubTasks updated on the &quot;Manage Subtasks&quot; button" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:58.856" endtime="20230323 01:48:58.856"/>
+</kw>
+<kw name="Then delete the user task" library="avenuecode_automation">
+<status status="NOT RUN" starttime="20230323 01:48:58.857" endtime="20230323 01:48:58.857"/>
+</kw>
+<kw name="Fechar o navegador" library="avenuecode_automation" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230323 01:48:58.883" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=111.0.5563.110)
+Stacktrace:
+Backtrace:
+	(No symbol) [0x0034DCE3]
+	(No symbol) [0x002E39D1]
+	(No symbol) [0x001F4DA8]
+	(No symbol) [0x001DD0D3]
+	(No symbol) [0x0023EA8B]
+	(No symbol) [0x0024D093]
+	(No symbol) [0x0023ACC6]
+	(No symbol) [0x00216F68]
+	(No symbol) [0x002180CD]
+	GetHandleVerifier [0x005C3832+2506274]
+	GetHandleVerifier [0x005F9794+2727300]
+	GetHandleVerifier [0x005FE36C+2746716]
+	GetHandleVerifier [0x003F6690+617600]
+	(No symbol) [0x002EC712]
+	(No symbol) [0x002F1FF8]
+	(No symbol) [0x002F20DB]
+	(No symbol) [0x002FC63B]
+	BaseThreadInitThunk [0x76A200F9+25]
+	RtlGetAppContainerNamedObjectPath [0x77B17BBE+286]
+	RtlGetAppContainerNamedObjectPath [0x77B17B8E+238]
+</msg>
+<msg timestamp="20230323 01:48:58.893" level="FAIL">
